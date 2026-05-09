@@ -10,22 +10,13 @@ import { initializeApp } from "firebase/app";
 // Your web app's Firebase configuration
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCBZS2vNOIjid4B9c64aBV65klj3808HNU",
-  authDomain: "backend-auguscel.firebaseapp.com",
-  projectId: "backend-auguscel",
-  storageBucket: "backend-auguscel.appspot.com",
-  messagingSenderId: "752573519913",
-  appId: "1:752573519913:web:9e19e36236839c7dd22438"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
 };
-//  const firebaseConfig = {
-//    apiKey: process.env.REACT_APP_apiKey,
-//    authDomain: process.env.REACT_APP_authDomain,
-//    projectId: process.env.REACT_APP_projectId,
-//      storageBucket: process.env.REACT_APP_storageBucket,
-//    messagingSenderId: process.env.REACT_APP_messagingSenderId,
-//   appId: process.env.REACT_APP_appId
-//  };
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app)

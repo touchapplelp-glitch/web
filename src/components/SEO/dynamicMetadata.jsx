@@ -27,7 +27,7 @@ function DynamicMetadata({
   const city = "La Plata";
   const region = "AR-B"; 
   const country = "Argentina";
-  
+  console.log("DynamicMetadata mounted");
   // Ajusta el título si hay información de producto
   const pageTitle = productName 
     ? `${productName} ${productBrand ? `| ${productBrand}` : ""} | ${storeName}`
@@ -65,29 +65,28 @@ function DynamicMetadata({
   } : null;
 
   // Construir datos estructurados para tienda local
-  const localBusinessData = {
-    "@context": "https://schema.org",
-    "@type": "Store",
-    "name": storeName,
-    "image": "https://tutienda.com/logo.jpg",
-    "telephone": "+54-221-XXXXXXX",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "12 n 593",
-      "addressLocality": city,
-      "addressRegion": "Buenos Aires",
-      "postalCode": "1900",
-      "addressCountry": country
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": "-34.9214",
-      "longitude": "-57.9544"
-    },
-    "priceRange": "$$",
-    "openingHours": "Mo-Sa 09:00-18:00"
-  };
-
+const localBusinessData = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "name": storeName,
+  "image": import.meta.env.VITE_STORE_LOGO,
+  "telephone": import.meta.env.VITE_STORE_PHONE,
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": import.meta.env.VITE_STORE_ADDRESS,
+    "addressLocality": city,
+    "addressRegion": "Buenos Aires",
+    "postalCode": import.meta.env.VITE_STORE_POSTAL_CODE,
+    "addressCountry": country
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": import.meta.env.VITE_STORE_LAT,
+    "longitude": import.meta.env.VITE_STORE_LNG
+  },
+  "priceRange": "$$",
+  "openingHours": "Mo-Sa 09:00-18:00"
+};
   return (
     <Helmet>
       {/* Metadatos básicos */}
@@ -137,7 +136,9 @@ function DynamicMetadata({
         </script>
       )}
     </Helmet>
+    
   );
+  
 }
 
 export default DynamicMetadata;

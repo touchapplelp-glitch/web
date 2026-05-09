@@ -1,7 +1,7 @@
 import MainHeader from "./MainHeader.jsx";
 
 import { RiArrowDownSLine} from "react-icons/ri";
-import ItemListContainer from "./ItemList/ItemListContainer.jsx";
+import CatalogSection from "./ItemList/CatalogSection.jsx";
 
 const MainContext = () => {
     return (
@@ -10,17 +10,14 @@ const MainContext = () => {
         {/* Header */}
           <MainHeader/>
             {/* title content */}
-            <div className="flex items-center justify-between mb-12">
-              <h2 className="text-xl text-gray-300">Productos:</h2>
-              <button className="flex items-center gap-4 text-gray-300 bg-[#1f1d2b] p-2 px-4 rounded-lg">
-
-                <RiArrowDownSLine/>Gama
-              </button>
+            <div className="flex items-center justify-between ">
+           
+             
             </div>
          
          
           {/* content */}        
-          <ItemListContainer />
+          <CatalogSection />
           </div>
         
           

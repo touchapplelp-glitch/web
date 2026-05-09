@@ -7,6 +7,8 @@ const createAdaptedProductFromFirestore = (doc) => {
     name: data.name ?? "",
     price: data.price ?? 0,
     stock: data.stock ?? 0,
+    gama: data.gama,
+    searchTokens: data.searchTokens,
     category: data.category ?? "",
     description: data.description ?? "",
     videoLink: data.videoLink,

@@ -63,7 +63,7 @@ const Sidebar = (props) => {
        
         </ul>
         </div>
-        <div>
+        <div className="hidden">
             <ul>
             <li>
             {currentUser ? (

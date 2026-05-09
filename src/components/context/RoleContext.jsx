@@ -14,7 +14,7 @@ export const RoleProvider = ({children})=>{
     useEffect(()=>{
          const fetchUserRole = async ()=>{
             if(!currentUser){
-                console.log("se ve que el if esta fallando que vuelve el rol null")
+                
                 setUserRole(null);
                 setRoleLoading(false)
                 return

@@ -1,5 +1,4 @@
 import React from "react";
-import { RiSearch2Line } from "react-icons/ri";
 import { NavLink, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { collection, getDocs, query, orderBy } from "firebase/firestore";
@@ -34,15 +33,15 @@ const MainHeader = () => {
         </div>
 
         <div>
-         <Search
-  onProductSelection={() => {}}
-  renderResult={(product) => (
-    <Link to={`/item/${product.slug}`}>
-      {product.name} -{" "}
-      <span className="text-[#D4BEE4]">${product.price}</span>
-    </Link>
-  )}
-/>
+          {/* 🟨 CAMBIO: Search ya no necesita onProductSelection */}
+          <Search
+            renderResult={(product) => (
+              <Link to={`/item/${product.slug}`}>
+                {product.name} -{" "}
+                <span className="text-[#D4BEE4]">${product.price}</span>
+              </Link>
+            )}
+          />
         </div>
       </div>
 

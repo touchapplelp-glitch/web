@@ -9,7 +9,8 @@ import {
   query,
   where,
   orderBy,
-  writeBatch
+  writeBatch,
+  limit
 } from "firebase/firestore";
 // Normalizacion
 function normalizeSearchTokens(searchTokens) {
