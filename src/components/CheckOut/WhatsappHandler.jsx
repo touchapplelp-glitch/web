@@ -1,8 +1,23 @@
 import React, { useEffect } from "react";
 
+/**
+ * WhatsappHandler
+ *
+ * Entradas:
+ * - cart: array de productos
+ * - orderId: ID de orden generada
+ *
+ * Salida:
+ * - Redirección automática a WhatsApp con mensaje preformateado
+ *
+ * Consumido por:
+ * - Checkout / Order confirmation
+ */
+
 const WhatsappHandler = ({ cart = [], orderId }) => {
-  // Solo números (recomendado por wa.me)
-  const ownerPhoneNumber = "542215389912";
+  // Número del negocio desde entorno
+  const ownerPhoneNumber =
+    import.meta.env.VITE_STORE_WHATSAPP || "";
 
   const generateWhatsAppMessage = () => {
     const message = cart
@@ -16,6 +31,11 @@ const WhatsappHandler = ({ cart = [], orderId }) => {
   };
 
   const handleRedirectToWhatsApp = () => {
+    if (!ownerPhoneNumber) {
+      console.error("WhatsApp number is missing in .env");
+      return;
+    }
+
     const message = generateWhatsAppMessage();
     const whatsappLink = `https://wa.me/${ownerPhoneNumber}?text=${message}`;
 
@@ -23,7 +43,7 @@ const WhatsappHandler = ({ cart = [], orderId }) => {
   };
 
   useEffect(() => {
-    // Evita abrir WhatsApp si todavía no hay datos
+    // Evita ejecución prematura
     if (!orderId || cart.length === 0) return;
 
     handleRedirectToWhatsApp();

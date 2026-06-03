@@ -106,7 +106,7 @@ const productUrls = products.map((p) => {
     : [];
 
   return {
-    url: `/item/${p.id}`,
+    url: `/item/${p.slug}`,
     priority: 0.7,
     changefreq: p.changefreq || "weekly",
     lastmod: p.updatedAt || new Date().toISOString(),
