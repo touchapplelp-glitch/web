@@ -26,7 +26,7 @@ const MainHeader = () => {
       <div className="flex flex-col mb-6 md:flex-row md:justify-between md:items-center">
         <div>
           <img
-            src="../public\AppleTisologoBLANCO-disbord.png"
+            src="/AppleTisologoBLANCO-disbord.png"
             alt="logo"
             className="h-40 w-auto"
           />
