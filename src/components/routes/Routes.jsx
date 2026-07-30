@@ -20,7 +20,7 @@ export const AppRoutes = () => {
       <Route path='/sobreNosotros' element={<AboutUs/>}/> 
       <Route path='/checkout' element={<CheckOut/>}/>
       <Route path='/Ofertas' element={<Offers/>}/>
-      <Route path='/AguDmin' element={<AdminPage />}/>
+      <Route path='/admin' element={<AdminPage />}/>
     </Routes>
   );
 };
