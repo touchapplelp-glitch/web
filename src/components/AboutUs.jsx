@@ -20,6 +20,7 @@ const AboutUs = () => {
           </p>
         </h2>
       </div>
+        <footer>Sitio desarrollado por Leandro M. Rapan </footer>
     );
   };
   export default AboutUs;
