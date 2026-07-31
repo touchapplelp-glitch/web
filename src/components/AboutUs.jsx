@@ -1,10 +1,10 @@
 const AboutUs = () => {
     return (
       <div className="lg:pl-32 p-4 bg-gray-900 min-h-screen">
-        <h1 className="text-6xl font-bold text-purple-100 mb-6">About Us</h1>
-        <h2 className="text-lg leading-relaxed text-gray-800 space-y-4">
+        <h1 className="text-6xl font-bold text-purple-900 mb-6">About Us</h1>
+        <h2 className="text-lg leading-relaxed text-white space-y-4">
           <p>
-            En <span className="font-semibold text-gray-800">Apple Touch</span> somos un equipo apasionado por la tecnología y comprometido con brindar una experiencia única a nuestros clientes. Desde nuestro inicio, nos hemos dedicado a acercarte los mejores productos Apple del mercado, garantizando calidad, transparencia y confianza en cada paso del camino.
+            En <span className="font-semibold text-purple-800">Apple Touch</span> somos un equipo apasionado por la tecnología y comprometido con brindar una experiencia única a nuestros clientes. Desde nuestro inicio, nos hemos dedicado a acercarte los mejores productos Apple del mercado, garantizando calidad, transparencia y confianza en cada paso del camino.
           </p>
           <p>
             Entendemos que comprar tecnología es más que una transacción: es una inversión y, muchas veces, una solución a tus necesidades. Por eso, nuestra prioridad no es solo ofrecerte los mejores dispositivos, sino también acompañarte antes, durante y después de tu compra.
