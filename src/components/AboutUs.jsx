@@ -2,7 +2,7 @@ const AboutUs = () => {
     return (
       <div className="lg:pl-32 p-4 bg-gray-900 min-h-screen">
         <h1 className="text-6xl font-bold text-purple-900 mb-6">About Us</h1>
-        <h2 className="text-lg leading-relaxed text-white space-y-4">
+        <div className="text-lg leading-relaxed text-white space-y-4">
           <p>
             En <span className="font-semibold text-purple-800">Apple Touch</span> somos un equipo apasionado por la tecnología y comprometido con brindar una experiencia única a nuestros clientes. Desde nuestro inicio, nos hemos dedicado a acercarte los mejores productos Apple del mercado, garantizando calidad, transparencia y confianza en cada paso del camino.
           </p>
@@ -18,9 +18,12 @@ const AboutUs = () => {
           <p>
             En <span className="font-semibold text-purple-100">Apple Touch</span>, no solo vendemos tecnología: construimos relaciones basadas en la honestidad y el respeto, buscando siempre lo mejor para nuestros clientes. ¡Gracias por elegirnos como tu lugar de confianza para todo lo relacionado con Apple!
           </p>
-        </h2>
+        </div>
+          <footer className="mt-12 text-sm text-gray-500">
+        Sitio desarrollado por Leandro M. Rapan
+      </footer>
       </div>
-        <footer>Sitio desarrollado por Leandro M. Rapan </footer>
+   
     );
   };
   export default AboutUs;
