@@ -54,7 +54,7 @@ return (
         <AdminLoginModal 
             isOpen={showLoginModal} 
             onClose={() => navigate("/")} 
-            onLoginSuccess={handleLoginSuccess} 
+           
         />
         
         {!showLoginModal && (
