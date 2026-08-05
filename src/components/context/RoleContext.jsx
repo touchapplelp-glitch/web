@@ -8,7 +8,7 @@ const RoleContext = createContext();
 export const RoleProvider = ({children})=>{
     const {currentUser} = useAuth();
     const [userRole, setUserRole]= useState(false);
-    const [roleLoading, setRoleLoading]= useState(false);
+    const [roleLoading, setRoleLoading]= useState(true);
     const [roleError, setRoleError]= useState(null);
 
     useEffect(()=>{
