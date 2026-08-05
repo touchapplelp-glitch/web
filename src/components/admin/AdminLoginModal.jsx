@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-const AdminLoginModal = ({isOpen, onClose, onLoginSuccess} ) => {
+const AdminLoginModal = ({isOpen, onClose} ) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { login } = useAuth();
@@ -17,7 +17,6 @@ const AdminLoginModal = ({isOpen, onClose, onLoginSuccess} ) => {
     setIsLoading(true)
     try {
       await login(email, password);
-      onLoginSuccess()
      
     } catch (error) {
       setError("Credenciales incorrectas. Por favor, intenta de nuevo.");
